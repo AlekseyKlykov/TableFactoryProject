@@ -1,4 +1,21 @@
 package hw03_TableFactory;
 
-public class BarTable {
+
+import lombok.*;
+
+@Getter
+@Setter
+@ToString
+@Builder
+@Value
+public class BarTable implements iBarTable {
+
+    Component tableTop;
+    Component box;
+    boolean wirelessCharging;
+    boolean cableDuct;
+    boolean usbConnector;
+    boolean beerDispenser;
+
+
 }

@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id("com.gradleup.shadow") version "9.0.0-beta4"
 }
 
 group = 'hw03_TableFactory'
@@ -12,6 +13,16 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+}
+jar {
+    manifest {
+        attributes(
+
+                'Main-Class': 'hw03_TableFactory.Main'
+        )
+    }
 }
 
 test {

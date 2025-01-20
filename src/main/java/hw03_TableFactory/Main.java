@@ -4,14 +4,45 @@ package hw03_TableFactory;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        iTableFactory tableFactory = new TableFactory();
+        iUsualTable usualTable = tableFactory.createUsualTable();
+
+        System.out.println(usualTable);
+
+        iBarTable barTable = tableFactory.createBarTable();
+
+        System.out.println(barTable);
+
+        System.out.println("-------------------------Objects from the withdrawal factory------------------------");
+
+
+        BarTable barTable2 = BarTable.builder().tableTop(Component.builder()
+                        .color("Black")
+                        .material("Wood Veneer NEW")
+                        .qty(1)
+                        .maximumLoad(140).build())
+                .wirelessCharging(true)
+                .beerDispenser(true)
+                .usbConnector(true)
+                .build();
+
+
+        System.out.println("-------------------------Objects from the class BarTable ------------------------");
+
+        System.out.println(barTable2);
+
+        System.out.println(barTable2.getTableTop());
+
+
+        System.out.println("-------------------------Objects from the class BarTable ------------------------");
+
+
+
     }
+
+
+
+
 }
+
