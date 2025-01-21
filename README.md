@@ -6,13 +6,10 @@
 Данные методы инициализируют объекты двух классов BarTable и UsualTable. Для реализации компанентов используется класс Component, объявление объектов класса Component осуществляется непосредственно в классах BarTable и UsualTable
 При инициализации используется конструкция builder().build(аннотация @Builder)
 Для вывода информации по данным объектам используются реализация ToString() библиотеки Lombok(аннотация @ToString).
-На скриншоте ниже отображен вывод информации по объектам BarTable и UsualTable в консоль.</h4>
+На скриншоте ниже отображен вывод информации по объектам BarTable и UsualTable(@ToString) и вывод информации через сгенерированный @Getter в консоль</h4>
+
+![image](https://github.com/user-attachments/assets/632cd5b4-1fb0-4896-8a6d-df0469222a97)
 
 
 
-![image](https://github.com/user-attachments/assets/e578520f-54df-4295-8410-58f90eb4224d)
 
-<h4>На скриншоте отображается 2 блока Objects from the withdrawal factory и Objects from the class BarTable
-Минусом данной реализации является то, что через переменные интерфейса(блок Objects from the withdrawal factory) iUsualTable и iBarTable использовать аннотации @Getter и @Setter не удалось.
-
-Для демонстрации использования @Getter и @Setter был создан объект класса BarTable напрямую в обход паттерна абстракной фабрики и отображен на консоли один из его компонентов.</h4>
