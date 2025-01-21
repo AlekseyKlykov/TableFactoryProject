@@ -4,7 +4,7 @@ package hw03_TableFactory;
 
 public class TableFactory implements iTableFactory {
     @Override
-    public iBarTable createBarTable() {
+    public BarTable createBarTable() {
         return BarTable.builder().tableTop(Component.builder()
                 .color("Black")
                 .material("Wood Veneer")
@@ -17,7 +17,7 @@ public class TableFactory implements iTableFactory {
     }
 
     @Override
-    public iUsualTable createUsualTable() {
+    public UsualTable createUsualTable() {
         return UsualTable.builder().tableTop(Component.builder()
                         .color("Black")
                         .material("Wood Veneer")

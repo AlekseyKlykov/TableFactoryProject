@@ -8,7 +8,7 @@ import lombok.*;
 @ToString
 @Builder
 @Value
-public class BarTable implements iBarTable {
+public class BarTable {
 
     Component tableTop;
     Component box;

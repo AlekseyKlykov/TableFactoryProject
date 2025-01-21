@@ -7,7 +7,7 @@ import lombok.*;
 @Value
 @Getter
 @Setter
-public class UsualTable implements iUsualTable {
+public class UsualTable {
     Component tableTop;
     Component box;
     boolean wirelessCharging;
